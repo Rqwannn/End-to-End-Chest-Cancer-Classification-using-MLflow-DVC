@@ -82,10 +82,15 @@ class ConfigurationManager:
 
 
     def get_evaluation_config(self) -> EvaluationConfig:
+        config = self.config.evaluasi
+
+        create_directories([config.root_dir])
+
         eval_config = EvaluationConfig(
             path_of_model="artifacts/training/model.h5",
             training_data="artifacts/data_ingestion/Chest-CT-Scan-data",
             mlflow_uri="https://dagshub.com/Rqwannn/End-to-End-Chest-Cancer-Classification-using-MLflow-DVC.mlflow",
+            score_model=Path(config.scores_path),
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,
             params_batch_size=self.params.BATCH_SIZE
