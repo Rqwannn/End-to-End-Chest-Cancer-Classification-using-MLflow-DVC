@@ -53,6 +53,8 @@ export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9353c5b10041d5c8edbcef0
 1. dvc init
 2. dvc repro
 3. dvc dag
+4. dvc cache purge
+5. dvc gc -w
 
 
 ## About MLflow & DVC
@@ -105,7 +107,7 @@ DVC
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken
+    - Save the URI: 122610505262.dkr.ecr.us-east-1.amazonaws.com/kidney
 
 	
 ## 4. Create EC2 machine (Ubuntu) 

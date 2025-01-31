@@ -24,6 +24,8 @@ class Training:
             metrics=["accuracy"]
         )
 
+        # self.model.summary() hasilnya tetep sama walaupun di compile ulang
+
     def train_valid_generator(self):
         datagenerator_kwargs = dict(rescale=1./255, validation_split=0.20)
         dataflow_kwargs = dict(target_size=self.config.params_image_size[:-1], batch_size=self.config.params_batch_size, interpolation="bilinear")
